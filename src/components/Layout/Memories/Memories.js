@@ -1,8 +1,18 @@
 import Button from "../../../UI/Button";
 import classes from "./Memories.module.css";
 import gridCircle from "../../../svg/memories-circle.svg";
+import { useDispatch } from "react-redux";
+import { searchActions } from "../../../store/searchSlice";
+import { useNavigate } from "react-router-dom";
 
 function Memories() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const searchAll = true;
+  const searchAllHandler = () => {
+    dispatch(searchActions.filterRooms(searchAll));
+    navigate("/search-result");
+  };
   return (
     <div className={classes.memories}>
       <div className="container">
@@ -23,6 +33,7 @@ function Memories() {
               border="1px solid rgba(0,0,0,1)"
               color="#000"
               text="Book Your Stay"
+              onClick={searchAllHandler}
             />
           </div>
           <div className={`col-md-6 ${classes["memories-col"]}`}>

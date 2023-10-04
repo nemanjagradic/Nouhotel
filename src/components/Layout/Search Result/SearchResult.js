@@ -17,6 +17,7 @@ function SearchResult() {
   useStickyNav(searchRef.current, { root: null, threshold: 0 });
   useEffect(() => {
     setRunAgain(true);
+    window.scrollTo(0, { behaviour: "smooth" });
   }, []);
   const dispatch = useDispatch();
   const filteredRooms = useSelector((state) => state.filteredRooms);
