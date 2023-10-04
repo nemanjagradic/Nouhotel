@@ -1,0 +1,95 @@
+.booking-form {
+  margin-top: 25%;
+  background-image: url("../../public//images/memories-background.jpg");
+}
+
+.booking-form-content {
+  padding: 10% 12%;
+}
+
+.booking-form h4 {
+  font-family: "Roboto Sans", serif;
+  font-weight: bold;
+  color: #9b9183;
+  margin-bottom: 20px;
+}
+
+.booking-field-date > label,
+.booking-field-people label {
+  display: block;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.booking-field-date {
+  position: relative;
+}
+
+.booking-field-date span {
+  position: absolute;
+  right: 20px;
+  top: 35px;
+  color: #999999;
+}
+
+.booking-field-date input::placeholder {
+  color: #999999;
+}
+
+.booking-field-date input,
+.booking-field-people input {
+  display: block !important;
+  border: none;
+  width: 257px;
+  height: 45px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  color: #999999;
+}
+
+.booking-field-date input:disabled,
+.booking-field-people input:disabled {
+  background: #fff;
+}
+
+.room-total {
+  margin-bottom: 15px;
+}
+
+.room-total h5 {
+  display: inline-block;
+}
+
+.room-total span {
+  width: 30%;
+  float: right;
+  text-align: right;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18px;
+  color: #9b9183;
+}
+
+@media screen and (max-width: 1200px) {
+  .booking-field-date input,
+  .booking-field-people input,
+  .booking-field-submit {
+    width: 230px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .booking-field-date input,
+  .booking-field-people input,
+  .booking-field-submit {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 930px) {
+  .booking-field-date input,
+  .booking-field-people input,
+  .booking-field-submit {
+    width: 100%;
+  }
+}

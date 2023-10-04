@@ -1,0 +1,23 @@
+.number {
+  display: inline-block;
+  font-size: 50px;
+  font-weight: bold;
+  color: #9b9183;
+  font-family: "Roboto Sans", serif;
+}
+
+.number.animate {
+  animation: shaking 0.1s infinite linear forwards;
+}
+
+@keyframes shaking {
+  0% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

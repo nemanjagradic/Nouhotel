@@ -1,0 +1,106 @@
+.footer {
+  padding: 100px 7% 50px 7%;
+  background: #3b3d40;
+}
+
+.footer h5 {
+  font-family: "Roboto Slab", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.footer p,
+.footer ul li {
+  color: #999999;
+}
+
+.footer span {
+  color: #ffbf35;
+}
+
+.footer-col:nth-child(1) {
+  flex: 1;
+}
+
+.footer-col {
+  flex-basis: 23%;
+}
+
+.footer-col span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-img {
+  margin-bottom: 20px;
+}
+
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-list li {
+  margin-bottom: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer-list li:hover {
+  color: #ffbf35;
+}
+
+.footer-brands-list {
+  display: inline-block;
+  list-style: none;
+}
+
+.footer-brands-list li {
+  display: inline-block;
+  opacity: 0.4;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.footer-brands-list li:hover {
+  transform: scale(0.95);
+  opacity: 1;
+}
+
+.footer-col input {
+  width: 85%;
+  height: 40px;
+  background: #36383c;
+  border: none;
+  padding-left: 20px;
+  color: #999999;
+}
+
+.footer-col input::placeholder {
+  font-family: "Roboto Slab", serif;
+  color: #999999;
+}
+
+.footer-col button {
+  width: 15%;
+  height: 40px;
+  background: #36383c;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    padding: 100px 3% 50px 3%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+}

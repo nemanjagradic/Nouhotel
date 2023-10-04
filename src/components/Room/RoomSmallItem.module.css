@@ -1,0 +1,197 @@
+.room-small-item {
+  text-align: initial;
+  transition: 0.5s ease;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.room-small-item a {
+  text-decoration: none;
+}
+
+.room-img {
+  width: 375px;
+  height: 330px;
+  transition: 0.3s linear;
+  overflow: hidden;
+  position: relative;
+}
+
+.room-img img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+.room-img:hover img {
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.room-content {
+  padding: 20px 30px;
+  border: 1px solid rgb(109, 109, 109, 0.3);
+  border-top: 0;
+}
+
+.room-small-item:hover .room-content {
+  border-top: 0 !important;
+  border: 1px solid rgb(109, 109, 109, 1);
+}
+
+.room-content h4 {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  color: #000;
+}
+
+.room-content h6 {
+  color: #999999;
+}
+
+.room-content h6 span {
+  color: #ffbf35;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1400px) {
+  .room-img {
+    width: 365px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .room-img {
+    width: 335px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .room-img {
+    width: 305px;
+    height: 305px;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .room-img {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .room-img {
+    width: 291px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .room-img {
+    width: 285px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .room-img {
+    width: 293px;
+  }
+  .room-content h4 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 975px) {
+  .room-img {
+    width: 285px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .room-img {
+    width: 276px;
+  }
+}
+@media screen and (max-width: 925px) {
+  .room-img {
+    width: 267px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .room-img {
+    width: 260px;
+  }
+}
+@media screen and (max-width: 875px) {
+  .room-img {
+    width: 390px;
+  }
+}
+@media screen and (max-width: 835px) {
+  .room-img {
+    width: 371px;
+  }
+}
+@media screen and (max-width: 805px) {
+  .room-img {
+    width: 357px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .room-img {
+    width: 344px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .room-img {
+    width: 685px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .room-img {
+    width: 650px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .room-img {
+    width: 620px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .room-img {
+    width: 590px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .room-img {
+    width: 560px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .room-img {
+    width: 530px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .room-img {
+    width: 506px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .room-img {
+    width: 476px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .room-img {
+    width: 440px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .room-img {
+    width: 420px;
+    height: 380px;
+  }
+}

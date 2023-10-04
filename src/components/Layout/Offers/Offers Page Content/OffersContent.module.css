@@ -1,0 +1,10 @@
+.offers-row {
+  margin-bottom: 100px;
+  justify-content: space-between;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.offer-content {
+  margin-top: 70px;
+}

@@ -1,0 +1,200 @@
+.wrapper-form {
+  position: absolute;
+  display: flex;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper-form .form-field-date,
+.wrapper-form .form-field-people,
+.wrapper-form .form-field-submit {
+  padding: 25px 30px;
+  background: #fff;
+  border-right: 1px solid rgb(188, 188, 188, 0.2);
+}
+
+.wrapper-form .form-field-date {
+  width: 250px;
+}
+
+.wrapper-form .form-field-date label,
+.wrapper-form .form-field-people,
+.wrapper-form .form-field-submit {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.form-field-date {
+  position: relative;
+}
+
+.form-field-date input {
+  border: none;
+  outline: none;
+}
+
+.form-field-date input {
+  margin-left: 25px;
+}
+
+.form-field-date input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.form-field-date input:disabled {
+  background-color: transparent;
+}
+
+.fa-icon {
+  position: absolute;
+  top: 58%;
+  left: 13%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #9b9183;
+}
+
+.fa-icon-2 {
+  position: absolute;
+  top: 58%;
+  left: 13%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #9b9183;
+}
+
+.form-field-people input {
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: #9b9183;
+}
+
+.form-field-people input::placeholder {
+  color: #9b9183;
+}
+
+.form-field-people input:disabled {
+  background: transparent;
+}
+
+.form-field-submit {
+  padding: 0 !important;
+}
+
+.form-field-submit button {
+  background: #9b9183;
+  width: 170px;
+  height: 100%;
+  border: none;
+  border-right: 0 !important;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.form-field-submit button:disabled {
+  background: #cac1b5;
+}
+
+.wrapper-form-responsive {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.wrapper-form-responsive .form-field-date,
+.wrapper-form-responsive .form-field-people {
+  padding: 15px 0;
+  background: #fff;
+}
+
+.wrapper-form-responsive .form-field-date input {
+  padding-left: 20px;
+  background: transparent;
+}
+
+.wrapper-form-responsive .form-field-people input {
+  padding-left: 20px;
+}
+
+.wrapper-form-responsive .form-field-people input {
+  width: 100%;
+}
+
+.wrapper-form-responsive label {
+  display: block;
+  padding-left: 15px;
+}
+
+.wrapper-form-responsive .form-field-submit button {
+  width: 100%;
+}
+
+.wrapper-form-responsive .fa-icon,
+.wrapper-form-responsive .fa-icon-2 {
+  top: 57%;
+  left: 8%;
+}
+
+.h-2 {
+  grid-row: span 2;
+}
+.w-2 {
+  grid-column: span 2;
+}
+.w-3 {
+  grid-column: span 3;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper-form .form-field-date,
+  .wrapper-form .form-field-people,
+  .wrapper-form .form-field-submit {
+    padding: 15px 20px;
+  }
+  .form-field-date input {
+    font-size: 14px;
+  }
+  .fa-icon,
+  .fa-icon-2 {
+    font-size: 14px;
+    top: 62%;
+  }
+  .form-field-date input::placeholder {
+    font-size: 14px;
+  }
+  .wrapper-form .form-field-date label,
+  .wrapper-form .form-field-people,
+  .wrapper-form .form-field-submit {
+    font-size: 12px;
+  }
+  .form-field-submit button {
+    font-size: 12px;
+    width: 130px;
+  }
+  .wrapper-form .form-field-date {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .wrapper-form-responsive {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 90px;
+    flex-wrap: wrap;
+  }
+  .wrapper-form {
+    display: none;
+  }
+  .form-field-submit button {
+    font-size: 14px;
+  }
+}

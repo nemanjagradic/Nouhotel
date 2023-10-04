@@ -1,0 +1,258 @@
+.room-item-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room-item-col {
+  flex-basis: 68%;
+  margin: 80px 0;
+}
+
+.room-form {
+  flex-basis: 28%;
+}
+
+.room-item-title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.room-item-title-price h1 {
+  font-family: "Roboto-sans", serif;
+  font-weight: bold;
+}
+
+.room-item-title-price p {
+  color: #8a8a8a;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.room-item-title-price p span {
+  font-size: 22px;
+  color: #ffbf35;
+  letter-spacing: 0;
+}
+
+.room-item-general-info {
+  padding: 15px 0;
+}
+
+.room-item-general-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.room-item-general-info ul li {
+  display: inline-block;
+  margin-right: 20px;
+  color: #8a8a8a;
+  font-size: 14px;
+}
+
+.room-item-general-info ul li svg {
+  margin-right: 5px;
+}
+
+.room-item-big-image img {
+  width: 100%;
+  height: 550px;
+  margin-bottom: 10px;
+}
+
+.room-item-small-image {
+  position: relative;
+  display: inline-block;
+}
+
+.room-item-small-image img {
+  width: 185px;
+  height: 165px;
+  margin-right: 10px;
+}
+
+.image-overlay {
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.room-item-description {
+  padding: 30px 0;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.room-item-content h4 {
+  font-family: "Roboto Sans", serif;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.room-item-description p {
+  color: #8a8a8a;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.room-item-amenities {
+  padding: 30px 0;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.room-item-amenities ul {
+  list-style-type: circle;
+  padding-left: 0;
+}
+
+.room-item-amenities ul li {
+  display: inline-block;
+  font-size: 14px;
+  color: #8a8a8a;
+  padding-left: 10px;
+  width: 33.3%;
+  position: relative;
+}
+
+.room-item-content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #d0d0d0;
+}
+
+.room-item-rules {
+  padding: 30px 0;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.room-item-checking {
+  display: flex;
+}
+
+.room-item-check-in {
+  flex-basis: 50%;
+}
+
+.room-item-content h6 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.room-item-content p {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.room-item-check-in ul,
+.room-item-check-out ul {
+  list-style: none;
+  padding: 0;
+}
+
+.room-item-check-in ul li,
+.room-item-check-out ul li {
+  color: #8a8a8a;
+  padding-left: 10px;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.other-rooms {
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.room-form-responsive {
+  display: none;
+}
+
+@media screen and (max-width: 930px) {
+  .room-item-small-image img {
+    width: 175px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .room-form {
+    display: none;
+  }
+  .room-item-col {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .room-form-responsive {
+    display: block;
+    margin-top: 0;
+  }
+  .room-form-responsive form {
+    margin: 50px 0;
+  }
+  .room-form-responsive form input {
+    width: 615px;
+  }
+  .room-item-col {
+    margin-bottom: 0;
+  }
+  .room-form-responsive form button {
+    width: 615px !important;
+  }
+}
+@media screen and (max-width: 780px) {
+  .room-form-responsive form input,
+  .room-form-responsive form button {
+    width: 540px !important;
+  }
+  .other-rooms > div > div {
+    margin-bottom: 20px;
+  }
+  .room-item-big-image img {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .room-item-small-image img {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .room-form-responsive form input,
+  .room-form-responsive form button {
+    width: 500px !important;
+  }
+}
+@media screen and (max-width: 670px) {
+  .room-form-responsive form input,
+  .room-form-responsive form button {
+    width: 460px !important;
+  }
+}
+@media screen and (max-width: 610px) {
+  .room-form-responsive form input,
+  .room-form-responsive form button {
+    width: 420px !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  .room-form-responsive form input,
+  .room-form-responsive form button {
+    width: 370px !important;
+  }
+}
