@@ -255,4 +255,13 @@
   .room-form-responsive form button {
     width: 370px !important;
   }
+  .room-item-amenities ul li {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .room-item-small-image img {
+    width: 110px;
+    height: 110px;
+  }
 }

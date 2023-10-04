@@ -153,3 +153,9 @@
     width: 360px !important;
   }
 }
+@media screen and (max-width: 470px) {
+  .search-form-col form input,
+  .search-form-col form button {
+    width: 330px !important;
+  }
+}

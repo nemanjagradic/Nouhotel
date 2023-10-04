@@ -195,3 +195,9 @@
     height: 380px;
   }
 }
+@media screen and (max-width: 450px) {
+  .room-img {
+    width: 405px;
+    height: 380px;
+  }
+}
