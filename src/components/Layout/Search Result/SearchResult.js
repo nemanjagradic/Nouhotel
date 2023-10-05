@@ -25,19 +25,11 @@ function SearchResult() {
 
   const [checkIn, setCheckIn] = useState(null);
   const [checkOut, setCheckOut] = useState(null);
-  const [minCheckOut, setMinCheckOut] = useState(null);
-  const [maxCheckOut, setMaxCheckOut] = useState(null);
   const [adult, setAdult] = useState(bookingValues[2]?.value || "");
   const [children, setChildren] = useState(bookingValues[3]?.value || "");
 
   const handleCheckIn = (date) => {
     setCheckIn(date);
-    const newMinCheckOut = new Date(date);
-    const newMaxCheckOut = new Date(date);
-    newMinCheckOut.setDate(newMinCheckOut.getDate() + 3);
-    newMaxCheckOut.setDate(newMaxCheckOut.getDate() + 20);
-    setMinCheckOut(newMinCheckOut);
-    setMaxCheckOut(newMaxCheckOut);
   };
 
   const handleCheckOut = (date) => {
@@ -110,8 +102,8 @@ function SearchResult() {
                 placeholderCheckOut: bookingValues[1]
                   ? formatDate(bookingValues[1].value)
                   : "Check Out",
-                minCheckOut: minCheckOut,
-                maxCheckOut: maxCheckOut,
+                minCheckOut: new Date(),
+                maxCheckOut: new Date("2023-12-31"),
                 adultValue: adult,
                 changeAdult: (e) => setAdult(parseInt(e.target.value)),
                 childrenValue: children,

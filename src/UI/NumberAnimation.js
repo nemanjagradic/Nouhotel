@@ -19,7 +19,7 @@ const NumberAnimation = ({ targetNumber, duration, thousand }) => {
 
     const options = {
       root: null,
-      threshold: 0.2,
+      threshold: 0.3,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -47,19 +47,14 @@ const NumberAnimation = ({ targetNumber, duration, thousand }) => {
     : Math.floor(currentNumber).toLocaleString();
 
   return (
-    <>
-      {targetNumber !== currentNumber && (
-        <span
-          className={`${classes.number} ${classes.animate}`}
-          ref={aboutStatsRef}
-        >
-          {formattedNumber}
-        </span>
-      )}
-      {targetNumber === currentNumber && (
-        <span className={classes.number}>{formattedNumber}</span>
-      )}
-    </>
+    <span
+      className={`${classes.number} ${
+        targetNumber !== currentNumber ? classes.animate : ""
+      }`}
+      ref={aboutStatsRef}
+    >
+      {formattedNumber}
+    </span>
   );
 };
 

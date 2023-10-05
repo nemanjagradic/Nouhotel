@@ -11,6 +11,7 @@ function CurrentUrl() {
     .split("/")
     .slice(3)
     .map((link) => link.replaceAll("-", " "));
+  console.log(formattedUrl);
   const lastIndex = formattedUrl.length - 1;
   const { roomId, offerId } = useParams();
   const currentRoom = rooms.find((room) => room.id === parseInt(roomId));
@@ -50,20 +51,14 @@ function CurrentUrl() {
           formattedUrl.map((link, index) => {
             if (formattedUrl.length > 1 && index < lastIndex) {
               return (
-                <li
-                  key={index}
-                  className={index === lastIndex ? classes.active : ""}
-                >
+                <li key={index}>
                   <span>{link}</span>
                   <FontAwesomeIcon icon={faChevronRight} />
                 </li>
               );
             }
             return (
-              <li
-                key={index}
-                className={index === lastIndex ? classes.active : ""}
-              >
+              <li key={index} className={classes.active}>
                 {link}
               </li>
             );
