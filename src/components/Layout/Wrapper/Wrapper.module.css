@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  animation: scaleAnimation 5s linear infinite;
+  animation: scaleAnimation 5s linear infinite forwards;
   transition: background-image 0.3s ease;
 }
 
