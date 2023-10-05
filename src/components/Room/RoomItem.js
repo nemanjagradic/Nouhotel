@@ -29,10 +29,10 @@ function RoomItem({ currentRoom }) {
   const [bigImage, setBigImage] = useState(images[0]);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const [checkIn, setCheckIn] = useState(null);
-  const [checkOut, setCheckOut] = useState(null);
-  const [minCheckOut, setMinCheckOut] = useState(null);
-  const [maxCheckOut, setMaxCheckOut] = useState(null);
+  const [checkIn, setCheckIn] = useState();
+  const [checkOut, setCheckOut] = useState();
+  const [minCheckOut, setMinCheckOut] = useState();
+  const [maxCheckOut, setMaxCheckOut] = useState();
   const [adult, setAdult] = useState(0);
   const [children, setChildren] = useState(0);
   const [total, setTotal] = useState(0);
@@ -62,17 +62,21 @@ function RoomItem({ currentRoom }) {
     setAdult(parseInt(e.target.value));
     if (adult === 0) setChildren(0);
   };
+  console.log(total);
 
   const { roomId } = useParams();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setTotal(0);
+    setAdult(0);
+    setCheckIn(null);
+    setCheckOut(null);
   }, [roomId]);
 
   useEffect(() => {
-    if (checkIn === null || checkOut === null) return;
-
-    const monthCheckIn = new Date(available[0]).getDate();
-    const monthCheckOut = new Date(available[1]).getDate();
+    const monthCheckIn = new Date(checkIn).getDate();
+    const monthCheckOut = new Date(checkOut).getDate();
+    console.log(monthCheckIn, monthCheckOut);
     let totalPrice;
 
     if (monthCheckIn < monthCheckOut) {

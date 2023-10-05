@@ -262,7 +262,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2023-09-30").getTime()],
+    available: [Date.now(), new Date("2023-11-30").getTime()],
   },
   {
     id: 9,
