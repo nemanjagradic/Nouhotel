@@ -295,6 +295,8 @@ function RoomItem({ currentRoom }) {
               checkIn: checkIn,
               handleCheckIn: handleCheckIn,
               placeholderCheckIn: "Arrival Date",
+              minCheckIn: new Date(available[0]),
+              maxCheckIn: new Date(available[1]),
               checkOut: checkOut,
               handleCheckOut: handleCheckOut,
               placeholderCheckOut: "Deprature Date",

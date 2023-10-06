@@ -259,6 +259,13 @@
     font-size: 12px;
   }
 }
+@media screen and (max-width: 470px) {
+  .room-form-responsive form input,
+  .room-form-responsive form button {
+    width: 330px !important;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .room-item-small-image img {
     width: 110px;
