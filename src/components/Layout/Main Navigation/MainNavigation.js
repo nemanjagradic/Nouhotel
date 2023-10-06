@@ -34,7 +34,9 @@ function MainNavigation() {
           <FontAwesomeIcon icon={faBarsStaggered} />
         </div>
         <div className={classes["nav-col-logo"]}>
-          <img src={logoSvg} alt="Logo" />
+          <Link to="">
+            <img src={logoSvg} alt="Logo" />
+          </Link>
         </div>
         <div className={classes["nav-col-small"]} onClick={searchHandler}>
           <FontAwesomeIcon icon={faCalendarPlus} />
@@ -45,7 +47,9 @@ function MainNavigation() {
         >
           <ul>
             <li className={classes["nav-col-logo"]}>
-              <img src={logoSvg} alt="Logo" />
+              <Link to="">
+                <img src={logoSvg} alt="Logo" />
+              </Link>
             </li>
             <li className={classes.close} onClick={hideNavHandler}>
               <FontAwesomeIcon icon={faXmark} />
@@ -71,7 +75,9 @@ function MainNavigation() {
       <div className={classes.nav} style={{ position: "relative" }}>
         <nav>
           <div className={classes["nav-col-logo"]}>
-            <img src={logoSvg} alt="Logo" />
+            <Link to="">
+              <img src={logoSvg} alt="Logo" />
+            </Link>
           </div>
           <div className={classes["nav-col-main"]}>
             <ul>
