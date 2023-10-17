@@ -36,6 +36,7 @@ function RoomItem({ currentRoom }) {
   const [adult, setAdult] = useState(0);
   const [children, setChildren] = useState(0);
   const [total, setTotal] = useState(0);
+  const [lastMonthDays, setLastMonthDays] = useState(0);
 
   const handleCheckIn = (date) => {
     setCheckIn(date);
@@ -62,7 +63,6 @@ function RoomItem({ currentRoom }) {
     setAdult(parseInt(e.target.value));
     if (adult === 0) setChildren(0);
   };
-  console.log(total);
 
   const { roomId } = useParams();
   useEffect(() => {
@@ -76,7 +76,7 @@ function RoomItem({ currentRoom }) {
   useEffect(() => {
     const monthCheckIn = new Date(checkIn).getDate();
     const monthCheckOut = new Date(checkOut).getDate();
-    console.log(monthCheckIn, monthCheckOut);
+    console.log(new Date(checkIn).getMonth() + 1, monthCheckIn, monthCheckOut);
     let totalPrice;
 
     if (monthCheckIn < monthCheckOut) {
@@ -84,8 +84,13 @@ function RoomItem({ currentRoom }) {
         (monthCheckOut - monthCheckIn) * (price * adult + price * children);
     }
     if (monthCheckIn > monthCheckOut) {
+      const checkInTime = new Date(checkIn);
+      const checkInYear = checkInTime.getFullYear();
+      const checkInMonth = checkInTime.getMonth() + 1;
+      const lastMonth = new Date(checkInYear, checkInMonth, 0);
       totalPrice =
-        (monthCheckIn - monthCheckOut) * (price * adult + price * children);
+        (lastMonth.getDate() - monthCheckIn + monthCheckOut) *
+        (price * adult + price * children);
     }
 
     setTotal(totalPrice);

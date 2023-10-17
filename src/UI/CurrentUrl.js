@@ -11,7 +11,6 @@ function CurrentUrl() {
     .split("/")
     .slice(3)
     .map((link) => link.replaceAll("-", " "));
-  console.log(formattedUrl);
   const lastIndex = formattedUrl.length - 1;
   const { roomId, offerId } = useParams();
   const currentRoom = rooms.find((room) => room.id === parseInt(roomId));

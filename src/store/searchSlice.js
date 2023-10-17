@@ -27,7 +27,7 @@ export const rooms = [
       "Smoke alarms",
       "Wifi",
     ],
-    available: [Date.now(), new Date("2023-10-31").getTime()],
+    available: [Date.now(), new Date("2023-12-31").getTime()],
   },
   {
     id: 2,
