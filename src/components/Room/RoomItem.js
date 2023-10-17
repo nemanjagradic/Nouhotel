@@ -36,7 +36,6 @@ function RoomItem({ currentRoom }) {
   const [adult, setAdult] = useState(0);
   const [children, setChildren] = useState(0);
   const [total, setTotal] = useState(0);
-  const [lastMonthDays, setLastMonthDays] = useState(0);
 
   const handleCheckIn = (date) => {
     setCheckIn(date);
