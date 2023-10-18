@@ -78,7 +78,8 @@ function BookingForm({ data }) {
         {data.roomItem &&
           data.checkIn &&
           data.checkOut &&
-          data.adultValue >= 1 && (
+          data.adultValue >= 1 &&
+          data.childrenValue >= 0 && (
             <div className={classes["room-total"]}>
               <h5>Total</h5>
               <span>${data.total}</span>

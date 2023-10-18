@@ -61,7 +61,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2023-10-15").getTime()],
+    available: [Date.now(), new Date("2023-11-15").getTime()],
   },
   {
     id: 3,
@@ -160,7 +160,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2023-10-10").getTime()],
+    available: [Date.now(), new Date("2023-12-15").getTime()],
   },
   {
     id: 6,
@@ -194,7 +194,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2023-10-31").getTime()],
+    available: [Date.now(), new Date("2023-12-10").getTime()],
   },
   {
     id: 7,
@@ -228,7 +228,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2023-10-10").getTime()],
+    available: [Date.now(), new Date("2023-12-31").getTime()],
   },
   {
     id: 8,
@@ -262,7 +262,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2023-11-30").getTime()],
+    available: [Date.now(), new Date("2023-12-10").getTime()],
   },
   {
     id: 9,
@@ -291,7 +291,7 @@ export const rooms = [
       "Tea and coffee making",
       "Wifi",
     ],
-    available: [Date.now(), new Date("2023-10-15").getTime()],
+    available: [Date.now(), new Date("2023-11-20").getTime()],
   },
   {
     id: 10,
