@@ -15,13 +15,10 @@ import { useEffect, useState, useRef } from "react";
 import { rooms } from "../../store/searchSlice";
 import { useParams } from "react-router-dom";
 import useStickyNav from "../../hooks/useStickyNav";
-import { useDispatch } from "react-redux";
-import { searchActions } from "../../store/searchSlice";
 /* eslint-disable no-unused-vars */
 
 function RoomItem({ currentRoom }) {
   const singleRoomRef = useRef();
-  const dispatch = useDispatch();
   const [runAgain, setRunAgain] = useState(false);
   useStickyNav(singleRoomRef.current, { root: null, threshold: 0 });
   useEffect(() => {
@@ -77,9 +74,8 @@ function RoomItem({ currentRoom }) {
   useEffect(() => {
     if (adult === 0) {
       setChildren(0);
-      dispatch(searchActions.resetChildrenAndAdult());
     }
-  }, [adult, children, dispatch]);
+  }, [adult, children]);
 
   useEffect(() => {
     const monthCheckIn = new Date(checkIn).getDate();
