@@ -25,11 +25,14 @@ function ExclusiveOffers() {
               <h6>Latest Offer & Packages</h6>
               <Link to="/offers">
                 <Button
-                  background="transparent"
-                  border="1px solid rgba(0,0,0,1)"
-                  color="#000"
-                  text="Discover More"
-                />
+                  styles={{
+                    background: "transparent",
+                    border: "1px solid rgba(0,0,0,1)",
+                    color: "#000",
+                  }}
+                >
+                  Discover More
+                </Button>
               </Link>
             </div>
           </div>

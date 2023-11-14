@@ -57,28 +57,28 @@ function AboutContent() {
           <div className="d-flex justify-content-center flex-wrap">
             <div className={classes["about-stats-col"]}>
               <h6>Luxury rooms</h6>
-              <NumberAnimation targetNumber={524} duration={2000} />
+              <NumberAnimation targetNumber={524} duration={3000} />
             </div>
             <div className={classes["about-stats-col"]}>
               <h6>Guests</h6>
               <p>
                 <NumberAnimation
                   targetNumber={748}
-                  duration={2000}
+                  duration={3000}
                   thousand={true}
                 />
               </p>
             </div>
             <div className={classes["about-stats-col"]}>
               <h6>Five star ratings</h6>
-              <NumberAnimation targetNumber={3659} duration={2000} />
+              <NumberAnimation targetNumber={3659} duration={3000} />
             </div>
             <div className={classes["about-stats-col"]}>
               <h6>Served Breakfast</h6>
               <p>
                 <NumberAnimation
                   targetNumber={1782}
-                  duration={2000}
+                  duration={3000}
                   thousand={true}
                 />
               </p>

@@ -78,21 +78,21 @@ function RoomItem({ currentRoom }) {
   }, [adult, children]);
 
   useEffect(() => {
-    const monthCheckIn = new Date(checkIn).getDate();
-    const monthCheckOut = new Date(checkOut).getDate();
+    const dayCheckIn = new Date(checkIn).getDate();
+    const dayCheckOut = new Date(checkOut).getDate();
     let totalPrice;
 
-    if (monthCheckIn < monthCheckOut) {
+    if (dayCheckIn < dayCheckOut) {
       totalPrice =
-        (monthCheckOut - monthCheckIn) * (price * adult + price * children);
+        (dayCheckOut - dayCheckIn) * (price * adult + price * children);
     }
-    if (monthCheckIn > monthCheckOut) {
+    if (dayCheckIn > dayCheckOut) {
       const checkInTime = new Date(checkIn);
       const checkInYear = checkInTime.getFullYear();
       const checkInMonth = checkInTime.getMonth() + 1;
       const lastMonth = new Date(checkInYear, checkInMonth, 0);
       totalPrice =
-        (lastMonth.getDate() - monthCheckIn + monthCheckOut) *
+        (lastMonth.getDate() - dayCheckIn + dayCheckOut) *
         (price * adult + price * children);
     }
 
@@ -212,9 +212,9 @@ function RoomItem({ currentRoom }) {
                 <div className={classes["room-item-amenities"]}>
                   <h4>In-room Amenities</h4>
                   <ul>
-                    {amenities.map((amenity, i) => {
-                      return <li key={i}>{amenity}</li>;
-                    })}
+                    {amenities.map((amenity, i) => (
+                      <li key={i}>{amenity}</li>
+                    ))}
                   </ul>
                 </div>
                 <div className={classes["room-item-rules"]}>
@@ -260,9 +260,9 @@ function RoomItem({ currentRoom }) {
                 <div className={classes["other-rooms"]}>
                   <h4>Other Rooms</h4>
                   <div className="d-flex justify-content-between flex-wrap">
-                    {rooms.slice(7, 9).map((room) => {
-                      return <RoomSmallItem key={room.id} room={room} />;
-                    })}
+                    {rooms.slice(7, 9).map((room) => (
+                      <RoomSmallItem key={room.id} room={room} />
+                    ))}
                   </div>
                 </div>
               </div>

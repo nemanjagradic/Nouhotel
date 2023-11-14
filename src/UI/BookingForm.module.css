@@ -40,7 +40,7 @@
 
 .booking-field-date input,
 .booking-field-people input {
-  display: block !important;
+  display: block;
   border: none;
   width: 257px;
   height: 45px;

@@ -164,13 +164,16 @@ function ContactContent() {
                   )}
                 </div>
                 <Button
-                  width="130px"
-                  background="#9b9183"
-                  color="#fff"
-                  text="submit"
-                  margin="30px 0 0 0"
+                  styles={{
+                    width: "130px",
+                    background: "#9b9183",
+                    color: "#fff",
+                    margin: "30px 0 0 0",
+                  }}
                   disabled={!formIsValid}
-                />
+                >
+                  Submit
+                </Button>
               </form>
             </div>
           </div>

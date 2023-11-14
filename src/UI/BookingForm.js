@@ -5,20 +5,42 @@ import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function BookingForm({ data }) {
+function BookingForm({
+  data: {
+    submitHandler,
+    title,
+    checkIn,
+    handleCheckIn,
+    placeholderCheckIn,
+    minCheckIn,
+    maxCheckIn,
+    checkOut,
+    handleCheckOut,
+    placeholderCheckOut,
+    minCheckOut,
+    maxCheckOut,
+    adultValue,
+    changeAdult,
+    childrenValue,
+    changeChildren,
+    total,
+    buttonText,
+    roomItem,
+  },
+}) {
   return (
-    <form onSubmit={data.submitHandler} className={classes["booking-form"]}>
+    <form onSubmit={submitHandler} className={classes["booking-form"]}>
       <div className={classes["booking-form-content"]}>
-        <h4>{data.title}</h4>
+        <h4>{title}</h4>
         <div className={classes["booking-field-date"]}>
           <label htmlFor="checkIn">Check In</label>
           <DatePicker
             name="checkIn"
-            selected={data.checkIn}
-            onChange={data.handleCheckIn}
-            placeholderText={data.placeholderCheckIn}
-            minDate={data.minCheckIn}
-            maxDate={data.maxCheckIn}
+            selected={checkIn}
+            onChange={handleCheckIn}
+            placeholderText={placeholderCheckIn}
+            minDate={minCheckIn}
+            maxDate={maxCheckIn}
           />
           <span className={classes["fa-icon"]}>
             <FontAwesomeIcon icon={faCalendarDays} />
@@ -28,12 +50,12 @@ function BookingForm({ data }) {
           <label htmlFor="checkOut">Check Out</label>
           <DatePicker
             name="checkOut"
-            selected={data.checkOut}
-            onChange={data.handleCheckOut}
-            placeholderText={data.placeholderCheckOut}
-            minDate={data.minCheckOut}
-            maxDate={data.maxCheckOut}
-            disabled={!data.checkIn}
+            selected={checkOut}
+            onChange={handleCheckOut}
+            placeholderText={placeholderCheckOut}
+            minDate={minCheckOut}
+            maxDate={maxCheckOut}
+            disabled={!checkIn}
           />
           <span className={classes["fa-icon-2"]}>
             <FontAwesomeIcon icon={faCalendarDays} />
@@ -45,16 +67,14 @@ function BookingForm({ data }) {
             name="adult"
             type="number"
             min="0"
-            max={6 - data.childrenValue}
+            max={6 - childrenValue}
             step="1"
-            value={data.adultValue ? data.adultValue : ""}
+            value={adultValue ? adultValue : ""}
             placeholder={
-              data.adultValue > 0
-                ? data.adultValue
-                : "please, select date first"
+              adultValue > 0 ? adultValue : "please, select date first"
             }
-            onChange={data.changeAdult}
-            disabled={!data.checkIn || !data.checkOut}
+            onChange={changeAdult}
+            disabled={!checkIn || !checkOut}
           />
         </div>
         <div className={classes["booking-field-people"]}>
@@ -63,37 +83,34 @@ function BookingForm({ data }) {
             name="children"
             type="number"
             min="0"
-            max={6 - data.adultValue}
+            max={6 - adultValue}
             step="1"
-            value={data.adultValue ? data.childrenValue : ""}
+            value={adultValue ? childrenValue : ""}
             placeholder={
-              data.childrenValue > 0
-                ? data.childrenValue
-                : "please, select date first"
+              childrenValue > 0 ? childrenValue : "please, select date first"
             }
-            onChange={data.changeChildren}
-            disabled={!data.checkIn || !data.checkOut || data.adultValue < 1}
+            onChange={changeChildren}
+            disabled={!checkIn || !checkOut || adultValue < 1}
           />
         </div>
-        {data.roomItem &&
-          data.checkIn &&
-          data.checkOut &&
-          data.adultValue >= 1 &&
-          data.childrenValue >= 0 && (
-            <div className={classes["room-total"]}>
-              <h5>Total</h5>
-              <span>${data.total}</span>
-            </div>
-          )}
+        {roomItem && checkIn && checkOut && adultValue >= 1 && (
+          <div className={classes["room-total"]}>
+            <h5>Total</h5>
+            <span>${total}</span>
+          </div>
+        )}
         <div className={classes["booking-field-submit"]}>
           <Button
-            disabled={!data.checkIn || !data.checkOut || data.adultValue < 1}
+            disabled={!checkIn || !checkOut || adultValue < 1}
             type="submit"
-            color="#fff"
-            background="#9b9183"
-            text={data.buttonText}
-            width="100%"
-          ></Button>
+            styles={{
+              color: "#fff",
+              background: "#9b9183",
+              width: "100%",
+            }}
+          >
+            {buttonText}
+          </Button>
         </div>
       </div>
     </form>

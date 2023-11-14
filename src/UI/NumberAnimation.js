@@ -9,14 +9,6 @@ const NumberAnimation = ({ targetNumber, duration, thousand }) => {
     const frames = (duration / 1000) * 40;
     const incrementPerFrame = targetNumber / frames;
 
-    const animate = () => {
-      setCurrentNumber((prevNumber) => {
-        const newNumber = prevNumber + incrementPerFrame;
-        if (newNumber >= targetNumber) return targetNumber;
-        return newNumber;
-      });
-    };
-
     const options = {
       root: null,
       threshold: 0.3,
@@ -24,12 +16,19 @@ const NumberAnimation = ({ targetNumber, duration, thousand }) => {
 
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
-      if (entry.isIntersecting) {
-        const animationFrameId = requestAnimationFrame(animate);
 
-        return () => {
-          cancelAnimationFrame(animationFrameId);
+      if (entry.isIntersecting) {
+        const animate = () => {
+          setCurrentNumber((prevNumber) => {
+            const newNumber = prevNumber + incrementPerFrame;
+            if (newNumber >= targetNumber) return targetNumber;
+            return newNumber;
+          });
+
+          requestAnimationFrame(animate);
         };
+
+        animate();
       }
     }, options);
 
@@ -40,7 +39,7 @@ const NumberAnimation = ({ targetNumber, duration, thousand }) => {
     return () => {
       observer.disconnect();
     };
-  }, [currentNumber, targetNumber, duration, thousand]);
+  }, [currentNumber, targetNumber, duration]);
 
   const formattedNumber = thousand
     ? Math.round(currentNumber).toLocaleString() + "k"

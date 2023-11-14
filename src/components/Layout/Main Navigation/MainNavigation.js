@@ -115,11 +115,14 @@ function MainNavigation() {
           </div>
           <div className={classes["nav-col-small"]}>
             <Button
+              styles={{
+                background: "#9b9183",
+                color: "#fff",
+              }}
               onClick={searchHandler}
-              background="#9b9183"
-              color="#fff"
-              text="Book Your Stay"
-            />
+            >
+              Book Your Stay
+            </Button>
           </div>
         </nav>
       </div>

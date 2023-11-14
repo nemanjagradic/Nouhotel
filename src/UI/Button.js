@@ -1,21 +1,15 @@
 import classes from "./Button.module.css";
 
-function Button(props) {
+function Button({ styles, type, disabled, onClick, children }) {
   return (
     <button
-      style={{
-        background: props.background,
-        color: props.color,
-        border: props.border,
-        width: props.width,
-        margin: props.margin,
-      }}
+      style={styles}
       className={classes.btn}
-      type={props.type}
-      disabled={props.disabled}
-      onClick={props.onClick}
+      type={type}
+      disabled={disabled}
+      onClick={onClick}
     >
-      {props.text}
+      {children}
     </button>
   );
 }

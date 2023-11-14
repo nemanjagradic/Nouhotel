@@ -29,12 +29,15 @@ function Memories() {
               weddings.
             </p>
             <Button
-              background="transparent"
-              border="1px solid rgba(0,0,0,1)"
-              color="#000"
-              text="Book Your Stay"
+              styles={{
+                background: "transparent",
+                border: "1px solid rgba(0,0,0,1)",
+                color: "#000",
+              }}
               onClick={searchAllHandler}
-            />
+            >
+              Book Your Stay
+            </Button>
           </div>
           <div className={`col-md-6 ${classes["memories-col"]}`}>
             <div className={`${classes["grid-container"]}`}>

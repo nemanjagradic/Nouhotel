@@ -59,13 +59,13 @@ function SearchResult() {
     dispatch(searchActions.filterRooms(book));
   };
 
-  function formatDate(date) {
+  const formatDate = (date) => {
     const fullDate = new Date(date);
     const year = fullDate.getFullYear();
     const month = String(fullDate.getMonth() + 1).padStart(2, "0");
     const day = String(fullDate.getDate()).padStart(2, "0");
     return `${month}/${day}/${year}`;
-  }
+  };
 
   return (
     <>

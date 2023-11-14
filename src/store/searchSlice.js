@@ -325,7 +325,6 @@ export const rooms = [
 ];
 
 const searchState = {
-  rooms: rooms,
   filteredRooms: JSON.parse(localStorage.getItem("filteredRooms")) || [],
   bookingValues: JSON.parse(localStorage.getItem("bookingValues")) || [],
 };
@@ -338,12 +337,11 @@ const searchSlice = createSlice({
       if (action.payload === true) {
         state.filteredRooms = rooms;
       } else
-        state.filteredRooms = rooms.filter((room) => {
-          return (
+        state.filteredRooms = rooms.filter(
+          (room) =>
             room.available[1] >= action.payload.checkIn &&
             room.available[1] <= action.payload.checkOut
-          );
-        });
+        );
 
       state.bookingValues = Object.keys(action.payload).map((key) => ({
         key,
@@ -351,8 +349,10 @@ const searchSlice = createSlice({
       }));
     },
     resetChildrenAndAdult(state) {
-      state.bookingValues[2].value = 0;
-      state.bookingValues[3].value = 0;
+      if (state.bookingValues.length !== 0) {
+        state.bookingValues[2].value = 0;
+        state.bookingValues[3].value = 0;
+      }
     },
   },
 });
