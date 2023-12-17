@@ -96,14 +96,14 @@ function SearchResult() {
                   ? formatDate(bookingValues[0].value)
                   : "Check In",
                 minCheckIn: new Date(),
-                maxCheckIn: new Date("2023-12-31"),
+                maxCheckIn: new Date("2024-02-28"),
                 checkOut: checkOut,
                 handleCheckOut: handleCheckOut,
                 placeholderCheckOut: bookingValues[1]
                   ? formatDate(bookingValues[1].value)
                   : "Check Out",
                 minCheckOut: new Date(),
-                maxCheckOut: new Date("2023-12-31"),
+                maxCheckOut: new Date("2024-02-28"),
                 adultValue: adult,
                 changeAdult: (e) => setAdult(parseInt(e.target.value)),
                 childrenValue: children,
