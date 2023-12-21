@@ -102,7 +102,7 @@ function SearchResult() {
                 placeholderCheckOut: bookingValues[1]
                   ? formatDate(bookingValues[1].value)
                   : "Check Out",
-                minCheckOut: new Date(),
+                minCheckOut: checkIn,
                 maxCheckOut: new Date("2024-02-28"),
                 adultValue: adult,
                 changeAdult: (e) => setAdult(parseInt(e.target.value)),

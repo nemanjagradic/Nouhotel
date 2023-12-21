@@ -70,9 +70,7 @@ function BookingForm({
             max={6 - childrenValue}
             step="1"
             value={adultValue ? adultValue : ""}
-            placeholder={
-              adultValue > 0 ? adultValue : "please, select date first"
-            }
+            placeholder="please, select date first"
             onChange={changeAdult}
             disabled={!checkIn || !checkOut}
           />
@@ -86,9 +84,7 @@ function BookingForm({
             max={6 - adultValue}
             step="1"
             value={adultValue ? childrenValue : ""}
-            placeholder={
-              childrenValue > 0 ? childrenValue : "please, select date first"
-            }
+            placeholder="please, select date first"
             onChange={changeChildren}
             disabled={!checkIn || !checkOut || adultValue < 1}
           />

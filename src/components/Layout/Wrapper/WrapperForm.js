@@ -65,7 +65,7 @@ function WrapperForm() {
             onChange={handleCheckOut}
             placeholderText="Select Date"
             name="checkOut"
-            minDate={new Date()}
+            minDate={checkIn}
             maxDate={new Date("2024-02-28")}
             disabled={!checkIn}
           />
@@ -126,7 +126,7 @@ function WrapperForm() {
             onChange={handleCheckOut}
             placeholderText="Select Date"
             name="checkOut"
-            minDate={new Date()}
+            minDate={checkIn}
             maxDate={new Date("2024-02-28")}
             disabled={!checkIn}
           />
