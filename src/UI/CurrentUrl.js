@@ -48,7 +48,7 @@ function CurrentUrl() {
         {!currentRoom &&
           !currentOffer &&
           formattedUrl.map((link, index) => {
-            if (formattedUrl.length > 1 && index < lastIndex) {
+            if (index < lastIndex) {
               return (
                 <li key={index}>
                   <span>{link}</span>

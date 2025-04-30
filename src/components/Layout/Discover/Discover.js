@@ -6,15 +6,36 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { rooms } from "../../../store/searchSlice";
 import RoomSmallItem from "../../Room/RoomSmallItem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Headline from "../../../UI/Headline";
 
 function Discover() {
   const [curSlide, setCurSlide] = useState(0);
   const [pixels, setPixels] = useState(0);
+  const [responsiveIndex, setResponsiveIndex] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    let i;
+    if (window.innerWidth >= 870) {
+      i = -4;
+    } else if (window.innerWidth >= 750) {
+      i = -5;
+    } else {
+      i = -6;
+    }
+    setResponsiveIndex(i);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const nextSlide = () => {
-    if (curSlide === -4) {
+    if (curSlide === responsiveIndex) {
       setCurSlide(0);
       setPixels(0);
     } else {
@@ -24,7 +45,7 @@ function Discover() {
   };
   const prevSlide = () => {
     if (curSlide === 0) {
-      setCurSlide(-4);
+      setCurSlide(responsiveIndex);
       setPixels(72);
     } else {
       setCurSlide((prevSlide) => prevSlide + 1);

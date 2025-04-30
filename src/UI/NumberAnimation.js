@@ -3,7 +3,7 @@ import classes from "./NumberAnimation.module.css";
 
 const NumberAnimation = ({ targetNumber, duration, thousand }) => {
   const [currentNumber, setCurrentNumber] = useState(0);
-  const aboutStatsRef = useRef(null);
+  const numberStatRef = useRef(null);
 
   useEffect(() => {
     const frames = (duration / 1000) * 40;
@@ -32,8 +32,8 @@ const NumberAnimation = ({ targetNumber, duration, thousand }) => {
       }
     }, options);
 
-    if (aboutStatsRef.current) {
-      observer.observe(aboutStatsRef.current);
+    if (numberStatRef.current) {
+      observer.observe(numberStatRef.current);
     }
 
     return () => {
@@ -43,14 +43,14 @@ const NumberAnimation = ({ targetNumber, duration, thousand }) => {
 
   const formattedNumber = thousand
     ? Math.round(currentNumber).toLocaleString() + "k"
-    : Math.floor(currentNumber).toLocaleString();
+    : Math.round(currentNumber).toLocaleString();
 
   return (
     <span
       className={`${classes.number} ${
         targetNumber !== currentNumber ? classes.animate : ""
       }`}
-      ref={aboutStatsRef}
+      ref={numberStatRef}
     >
       {formattedNumber}
     </span>
