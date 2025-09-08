@@ -10,6 +10,11 @@
   justify-content: space-between;
 }
 
+.no-rooms-message {
+  color: #555;
+  padding: 20px 0;
+}
+
 .search-row {
   display: flex;
   flex-wrap: wrap;

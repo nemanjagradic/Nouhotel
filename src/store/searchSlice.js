@@ -27,7 +27,7 @@ export const rooms = [
       "Smoke alarms",
       "Wifi",
     ],
-    available: [Date.now(), new Date("2025-07-31").getTime()],
+    available: [Date.now(), new Date("2025-10-31").getTime()],
   },
   {
     id: 2,
@@ -61,7 +61,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2025-06-30").getTime()],
+    available: [Date.now(), new Date("2025-11-30").getTime()],
   },
   {
     id: 3,
@@ -93,7 +93,7 @@ export const rooms = [
       "Tea and coffee making",
       "Wifi",
     ],
-    available: [Date.now(), new Date("2025-06-30").getTime()],
+    available: [Date.now(), new Date("2025-09-30").getTime()],
   },
   {
     id: 4,
@@ -125,7 +125,7 @@ export const rooms = [
       "Tea and coffee making",
       "Wifi",
     ],
-    available: [Date.now(), new Date("2025-05-31").getTime()],
+    available: [Date.now(), new Date("2025-10-30").getTime()],
   },
   {
     id: 5,
@@ -160,7 +160,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2025-05-31").getTime()],
+    available: [Date.now(), new Date("2025-09-30").getTime()],
   },
   {
     id: 6,
@@ -194,7 +194,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2025-07-31").getTime()],
+    available: [Date.now(), new Date("2025-11-30").getTime()],
   },
   {
     id: 7,
@@ -228,7 +228,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2025-05-31").getTime()],
+    available: [Date.now(), new Date("2025-11-30").getTime()],
   },
   {
     id: 8,
@@ -262,7 +262,7 @@ export const rooms = [
       "Wifi",
       "Work desk",
     ],
-    available: [Date.now(), new Date("2025-06-30").getTime()],
+    available: [Date.now(), new Date("2025-11-15").getTime()],
   },
   {
     id: 9,
@@ -291,7 +291,7 @@ export const rooms = [
       "Tea and coffee making",
       "Wifi",
     ],
-    available: [Date.now(), new Date("2025-07-31").getTime()],
+    available: [Date.now(), new Date("2025-11-30").getTime()],
   },
   {
     id: 10,
@@ -320,7 +320,7 @@ export const rooms = [
       "Tea and coffee making",
       "Wifi",
     ],
-    available: [Date.now(), new Date("2025-06-30").getTime()],
+    available: [Date.now(), new Date("2025-11-30").getTime()],
   },
 ];
 

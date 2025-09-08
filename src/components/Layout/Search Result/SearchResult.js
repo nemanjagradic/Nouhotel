@@ -79,9 +79,16 @@ function SearchResult() {
               </p>
             </div>
             <div className={classes["search-result-items"]}>
-              {filteredRooms.map((room) => {
-                return <RoomSmallItem key={room.id} room={room} />;
-              })}
+              {filteredRooms.length === 0 ? (
+                <p className={classes["no-rooms-message"]}>
+                  Sorry, there are no available rooms for the selected dates.
+                  Please try different dates.
+                </p>
+              ) : (
+                filteredRooms.map((room) => (
+                  <RoomSmallItem key={room.id} room={room} />
+                ))
+              )}
             </div>
           </div>
           <div className={classes["search-form-col"]}>
@@ -96,14 +103,14 @@ function SearchResult() {
                   ? formatDate(bookingValues[0].value)
                   : "Check In",
                 minCheckIn: new Date(),
-                maxCheckIn: new Date("2025-07-31"),
+                maxCheckIn: new Date("2025-12-01"),
                 checkOut: checkOut,
                 handleCheckOut: handleCheckOut,
                 placeholderCheckOut: bookingValues[1]
                   ? formatDate(bookingValues[1].value)
                   : "Check Out",
                 minCheckOut: checkIn,
-                maxCheckOut: new Date("2025-07-31"),
+                maxCheckOut: new Date("2025-12-01"),
                 adultValue: adult,
                 changeAdult: (e) => setAdult(parseInt(e.target.value)),
                 childrenValue: children,
