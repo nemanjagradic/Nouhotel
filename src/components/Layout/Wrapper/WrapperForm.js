@@ -52,7 +52,7 @@ function WrapperForm() {
             placeholderText="Select Date"
             name="checkIn"
             minDate={new Date()}
-            maxDate={new Date("2025-12-01")}
+            maxDate={new Date("2026-02-15")}
           />
           <span className={classes["fa-icon"]}>
             <FontAwesomeIcon icon={faCalendarDays} />
@@ -66,7 +66,7 @@ function WrapperForm() {
             placeholderText="Select Date"
             name="checkOut"
             minDate={checkIn}
-            maxDate={new Date("2025-12-01")}
+            maxDate={new Date("2026-02-15")}
             disabled={!checkIn}
           />
           <span className={classes["fa-icon-2"]}>
@@ -113,7 +113,7 @@ function WrapperForm() {
             placeholderText="Select Date"
             name="checkIn"
             minDate={new Date()}
-            maxDate={new Date("2025-11-30")}
+            maxDate={new Date("2026-02-15")}
           />
           <span className={classes["fa-icon"]}>
             <FontAwesomeIcon icon={faCalendarDays} />
@@ -127,7 +127,7 @@ function WrapperForm() {
             placeholderText="Select Date"
             name="checkOut"
             minDate={checkIn}
-            maxDate={new Date("2025-11-30")}
+            maxDate={new Date("2026-02-15")}
             disabled={!checkIn}
           />
           <span className={classes["fa-icon-2"]}>
